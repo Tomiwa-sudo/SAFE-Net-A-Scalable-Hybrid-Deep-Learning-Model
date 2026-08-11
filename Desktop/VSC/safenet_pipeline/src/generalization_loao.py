@@ -1,21 +1,5 @@
 """
-Leave-One-Attack-Out (LOAO) generalization test — directly answers
-Reviewer #2 point 4: "The paper does not assess the model's ability to
-detect novel or previously unseen attack patterns."
 
-For each attack type in cfg.loao_attack_subset:
-  1. Remove ALL rows of that attack type from train AND val (the AE is
-     also retrained without it, so it is genuinely never seen).
-  2. Train AE + fused classifier as normal on the remaining classes.
-  3. Evaluate detection recall on a held-out test set containing ONLY
-     the excluded attack type (still binary Attack vs Benign — the model
-     never had a label for this specific attack, we're just asking "does
-     it still get flagged as anomalous/attack?").
-
-Only a SUBSET of attack types is tested (see config.loao_attack_subset)
-because retraining from scratch for all 33 categories is not tractable
-on commodity hardware in one run — this is documented explicitly in the
-paper's Limitations section, not hidden.
 """
 import os
 import sys
