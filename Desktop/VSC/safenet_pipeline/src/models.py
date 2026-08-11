@@ -1,21 +1,7 @@
 """
 Model architectures.
 
-MAIN MODEL (Option B redesign): a plain dense Autoencoder + a fusion MLP
-classifier that operates on ONE FLOW ROW AT A TIME. No LSTM, no sliding
-windows, no seq_len. This directly fixes:
-  - the shuffle-before-windowing bug (there's no windowing left to shuffle)
-  - the "sequences aren't temporal" methodology flaw (CICIoT2023 rows carry
-    no timestamp; treating rows as i.i.d. flow records is now the honest
-    framing, not an accidental one)
-  - the latency-measurement confusion (one row in -> one prediction out,
-    so "per packet" now means exactly what it says)
 
-DEEP BASELINES: CNN1D, CNN+BiLSTM+Attention, and a small Transformer
-encoder. These treat the 39 features of a single row as an ORDERED
-FEATURE VECTOR (a position in feature-space, not a position in time) —
-a standard, defensible technique in tabular deep learning, and clearly
-different from claiming genuine temporal structure across rows.
 """
 import torch
 import torch.nn as nn
