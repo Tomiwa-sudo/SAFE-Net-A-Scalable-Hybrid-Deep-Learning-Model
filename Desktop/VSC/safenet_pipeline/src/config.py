@@ -2,9 +2,7 @@
 Central configuration for the SAFE-Net v2 pipeline.
 NOTHING in this file is a hardcoded personal path — everything is
 either a sensible relative default or overridable via CLI flags.
-This directly addresses the reviewer complaint that the original
-repo shipped with a hardcoded C:\\Users\\... path and no way to
-reproduce results.
+
 """
 import argparse
 import os
