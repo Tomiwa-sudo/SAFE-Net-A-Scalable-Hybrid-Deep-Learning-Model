@@ -1,13 +1,7 @@
 """
 Shared evaluation + serialization utilities.
 
-CRITICAL DESIGN RULE (this is the fix for the reviewer's #1 complaint —
-narrative text, table, and confusion-matrix figure contradicting each
-other): every stage in this pipeline computes its metrics ONCE, writes
-them to a single `results.json`, and every downstream consumer (plots,
-tables, the auto-generated results_summary.md you paste into the paper)
-reads from that same file. Numbers are never re-typed or re-derived by
-hand anywhere in this codebase.
+
 """
 import json
 import os
