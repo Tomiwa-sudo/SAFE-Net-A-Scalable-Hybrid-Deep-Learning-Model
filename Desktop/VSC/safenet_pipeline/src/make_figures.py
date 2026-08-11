@@ -1,14 +1,7 @@
 """
 Reads every results_*.json produced by the other stages and generates:
-  - Publication-ready PNG figures (300 DPI, large fonts, tight layout,
-    sized for direct insertion into a two-column IEEE paper with NO
-    resizing/enlargement needed).
-  - results_summary.md: every number the paper needs, auto-formatted as
-    markdown tables and copy-paste-ready prose, generated directly from
-    the same JSON files the figures read. Because the paper's text,
-    Table II, and confusion-matrix figure will all be transcribed from
-    THIS ONE FILE, they cannot contradict each other the way the
-    original submission's did.
+  
+ 
 
 Run this LAST, after main/baselines_classical/baselines_deep/latency/
 generalization_loao/multiclass have all completed.
