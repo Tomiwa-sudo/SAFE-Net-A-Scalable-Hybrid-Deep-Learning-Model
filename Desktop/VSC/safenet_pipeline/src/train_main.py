@@ -1,14 +1,5 @@
 """
-Trains: (1) the Dense Autoencoder, (2) the fused SAFE-Net-v2 classifier,
-and (3) the two ablation arms (raw-features-only, latent-features-only),
-all sharing the same split/scaler so every number is directly comparable.
 
-Everything is written to <artifacts_dir>/<run_name>/main/:
-  best_ae.pt, best_clf_fused.pt, best_clf_rawonly.pt, best_clf_aeonly.pt
-  scaler.pkl, feature_names.json
-  ae_training_curve.json, clf_training_curve_*.json
-  results_fused.json, results_rawonly.json, results_aeonly.json   <- single source of truth
-  per_attack_type_recall.json
 """
 import json
 import os
