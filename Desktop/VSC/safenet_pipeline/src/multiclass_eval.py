@@ -1,14 +1,5 @@
 """
-Addresses Reviewer #1: "the authors choose to collapse this rich dataset
-into a trivial binary classification task." We add a genuine multiclass
-head trained on the SAME fused features, but grouped into ~8 coarse
-CICIoT2023 categories (documented mapping below) so the resulting
-confusion matrix is actually READABLE at print size — a raw 33x33 heatmap
-is unreadable in any journal column width and would violate the user's
-explicit "no enlargement needed" requirement. The full 33-class recall
-table (plain numbers, not a heatmap) is still produced separately by
-train_main.py's per_attack_type_recall.json — nothing about resolution
-is lost, only the confusion-matrix VISUALIZATION is coarsened.
+
 """
 import os
 import re
