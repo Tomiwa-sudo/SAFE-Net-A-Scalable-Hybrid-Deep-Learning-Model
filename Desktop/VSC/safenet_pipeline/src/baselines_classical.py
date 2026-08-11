@@ -5,10 +5,6 @@ split and MinMaxScaler as the main SAFE-Net-v2 model (loaded from
 main/scaler.pkl and reconstructed via the same seeded split function),
 so the comparison in the paper is apples-to-apples.
 
-IMPORTANT: last time, Random Forest matched or beat the proposed model
-on this dataset and the paper claimed otherwise. This script reports
-whatever comes out, honestly, into baselines_results.json — the
-downstream figure/table generation does not hide or omit any baseline.
 """
 import os
 import pickle
