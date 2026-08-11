@@ -10,9 +10,7 @@ Key design choices (each one directly answers a review comment):
    a 16GB-RAM laptop even though the source data is ~45M rows.
 
 2. Sampling is fully seeded, scripted, and logged (counts per class,
-   per file) to `sampling_manifest.json` — nothing about how the
-   1.4M-row training set was built is left undocumented, which was
-   an explicit reviewer complaint about the original paper.
+   per file) to `sampling_manifest.json` 
 
 3. NO row-order-based "sequence" assumptions anywhere. Each row is
    treated as an independent flow-level record (see NOTES_ON_REDESIGN.md
